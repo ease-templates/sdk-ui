@@ -36,9 +36,9 @@ module.exports = {
         }
       ]
     },
-    filters: {
-      '.eslintrc': 'lint'
-    },
-    completeMessage: 'To get started:\n\n  {{#inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n\n'
-  }
+  },
+  filters: {
+    '.eslintrc': 'lint'
+  },
+  completeMessage: 'To get started:\n\n  {{#inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n\n'
 }
