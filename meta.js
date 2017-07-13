@@ -15,30 +15,16 @@ module.exports = {
       type: 'input',
       message: 'Author'
     },
-    lint: {
+    library: {
+      type: 'input',
+      required: true,
+      message: 'Library name',
+      default: 'app'
+    },
+    useStandard: {
       type: 'confirm',
-      message: 'Use ESLint to lint your code?'
-    },
-    lintConfig: {
-      when: 'lint',
-      type: 'list',
-      message: 'Pick an ESLint preset',
-      choices: [
-        {
-          "name": "Standard (https://github.com/feross/standard)",
-          "value": "standard",
-          "short": "Standard"
-        },
-        {
-          "name": "none (configure it yourself)",
-          "value": "none",
-          "short": "none"
-        }
-      ]
-    },
+      message: 'Use ESLint and javascript-standard-style to lint your code?'
+    }
   },
-  filters: {
-    '.eslintrc': 'lint'
-  },
-  completeMessage: 'To get started:\n\n  {{#inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n\n'
+  completeMessage: 'To get started:\n\n  {{#inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n\n  npm run dev\n\n'
 }
